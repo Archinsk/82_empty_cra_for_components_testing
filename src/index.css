@@ -3,6 +3,7 @@ body {
   font-family: proxima-nova;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 1rem;
   color: hsla(0, 0%, 50%, 1);
 }
 
