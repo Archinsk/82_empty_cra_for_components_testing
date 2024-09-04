@@ -1,0 +1,122 @@
+.button {
+  /* base */
+  --default-color-hue: 0;
+  --default-color-saturation: 0%;
+  --default-color-lightness: 50%;
+  --default-color-opacity: 1;
+  --default-color: hsla(
+    var(--default-color-hue),
+    var(--default-color-saturation),
+    var(--default-color-lightness),
+    var(--default-color-opacity)
+  );
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  display: inline-block;
+  /* font */
+  font-family: var(--button-font-family);
+  font-size: var(--button-font-size, var(--font-size, 1rem));
+  line-height: var(--button-line-height, var(--line-height, 1.5));
+  font-weight: var(--button-font-weight);
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  /* colors */
+  background-color: var(
+    --button-background-color,
+    var(--accent-color, transparent)
+  );
+  color: var(--button-color);
+  /* form */
+  padding: calc(
+      var(--button-padding-y, var(--padding, 0.375em)) -
+        var(--button-border-width, var(--border-width, 0.0625rem))
+    )
+    calc(
+      (var(--button-padding-y, var(--padding, 0.375em)) * 2) -
+        var(--button-border-width, var(--border-width, 0.0625rem))
+    );
+  border-radius: var(--button-border-radius, var(--border-radius));
+  border: var(--button-border-width, var(--border-width, 0.0625rem))
+    var(--button-border-style, var(--border-style, solid))
+    var(--button-border-color, var(--border-color, var(--default-color)));
+}
+
+@mixin button-square {
+  padding-left: calc(
+    var(--button-padding-y, var(--padding, 0.375em)) -
+      var(--button-border-width, var(--border-width, 0.0625rem))
+  );
+  padding-right: calc(
+    var(--button-padding-y, var(--padding, 0.375em)) -
+      var(--button-border-width, var(--border-width, 0.0625rem))
+  );
+  width: calc(
+    var(--button-font-size, var(--font-size, 1rem)) *
+      var(--button-line-height, var(--line-height, 1.5)) +
+      calc(
+        var(--button-padding-y, var(--padding, 0.375em)) -
+          var(--button-border-width, var(--border-width, 0.0625rem))
+      ) * 2 + var(--button-border-width, var(--border-width, 0.0625rem)) * 2
+  );
+}
+
+.button-block {
+  display: block;
+  width: 100%;
+}
+
+.button-square {
+  @include button-square;
+}
+
+.button-icon,
+.button-square {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  .icon + * {
+    margin-left: 0.5em;
+  }
+}
+
+@mixin button-square-on-point {
+  .icon + *:not(.badge) {
+    display: none;
+  }
+}
+
+@media (min-width: 576px) {
+  .button-square-sm {
+    @include button-square;
+    @include button-square-on-point;
+  }
+}
+
+@media (min-width: 768px) {
+  .button-square-md {
+    @include button-square;
+    @include button-square-on-point;
+  }
+}
+
+@media (min-width: 992px) {
+  .button-square-lg {
+    @include button-square;
+    @include button-square-on-point;
+  }
+}
+
+@media (min-width: 1200px) {
+  .button-square-xl {
+    @include button-square;
+    @include button-square-on-point;
+  }
+}
+
+.button-badge {
+  position: relative;
+}
