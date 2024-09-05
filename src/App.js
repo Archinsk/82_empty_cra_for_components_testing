@@ -14,8 +14,8 @@ function App() {
 
   return (
     <div className="App">
-      <div>Empty CRA-project</div>
-      <div className="use-case-title">Icon (in text)</div>
+      <h2>Empty CRA-project</h2>
+      <div className="use-case-title">Иконка (в тексте)</div>
       <div>
         Lor
         <Icon name="favorite" />
@@ -23,35 +23,22 @@ function App() {
         <Icon name="star" />
         sum dolor.
       </div>
-      <div className="use-case-title">Badge (in text)</div>
+      <div className="use-case-title">Значок (в тексте)</div>
       <div>
         Lorem <Badge>ipsum</Badge> dolor.
       </div>
-      <div className="use-case-title">Button (default)</div>
+      <div className="use-case-title">Кнопка</div>
       <Button>Default</Button>
-      <div className="use-case-title">Button square</div>
-      <Button square>X</Button>
-      <Button icon="favorite" square />
       <div className="use-case-title">
-        С указанием размера (только "small" и "large")
+        Кнопка с указанием размера ("small" или "large")
       </div>
-      <Button theme="secondary" size="small" className="me-3">
-        Маленькая
-      </Button>
-      <Button theme="secondary" className="me-3">
-        Обычная
-      </Button>
-      <Button theme="secondary" size="large">
-        Большая
-      </Button>
-      <div className="use-case-title">
-        Блочная (на всю ширину родительского элемента)
-      </div>
-      <Button theme="primary" block>
-        На всю ширину
-      </Button>
-      <div className="use-case-title">С иконкой</div>
-      <Button theme="primary" icon="star" size="small" className="me-3">
+      <Button size="small">Маленькая</Button>
+      <Button>Обычная</Button>
+      <Button size="large">Большая</Button>
+      <div className="use-case-title">Кнопка блочная</div>
+      <Button block>На всю ширину</Button>
+      <div className="use-case-title">Кнопка с иконкой</div>
+      <Button icon="star" size="small">
         В избранное
       </Button>
       <Button theme="primary" icon="star" className="me-3">
@@ -60,7 +47,7 @@ function App() {
       <Button theme="primary" icon="star" size="large">
         В избранное
       </Button>
-      <div className="use-case-title">Квадратная</div>
+      <div className="use-case-title">Кнопка квадратная</div>
       <Button theme="warning" square size="small" className="me-3">
         Ш
       </Button>
@@ -70,7 +57,7 @@ function App() {
       <Button theme="warning" square size="large">
         Ш
       </Button>
-      <div className="use-case-title">Квадратная с иконкой</div>
+      <div className="use-case-title">Кнопка квадратная с иконкой</div>
       <Button
         theme="danger"
         icon="favorite"
@@ -80,7 +67,7 @@ function App() {
       />
       <Button theme="danger" icon="favorite" square className="me-3" />
       <Button theme="danger" icon="favorite" square size="large" />
-      <div className="use-case-title">С бэйджем</div>
+      <div className="use-case-title">Кнопка со значком</div>
       <Button
         theme="secondary"
         size="small"

@@ -11,3 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.use-case-title {
+  color: black;
+  margin-top: 1rem;
+}
