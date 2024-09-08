@@ -13,8 +13,7 @@
   background-color: var(--badge-background-color, hsl(0, 0%, 90%));
   color: var(--badge-color);
   /* form */
-  padding: var(--badge-padding-y, 0.25em)
-    var(--badge-padding-x, 0.65em);
+  padding: var(--badge-padding-y, 0.25em) var(--badge-padding-x, 0.65em);
 }
 
 .btn .badge {
