@@ -1,7 +1,19 @@
 import React from "react";
-import "./Button.scss";
-import Icon from "./Icon";
-import Badge from "./Badge";
+import "./Button.css";
+import Icon from "../Icon/Icon";
+import Badge from "../Badge/Badge";
+
+interface ButtonProps {
+  children?: React.ReactNode;
+  className?: string;
+  type?: "button" | "submit" | "reset";
+  size?: "small" | "large";
+  block?: boolean;
+  square?: boolean;
+  icon?: boolean;
+  badge?: boolean;
+  onClick?: () => void;
+}
 
 function Button({
   children,
@@ -13,7 +25,7 @@ function Button({
   icon,
   badge,
   onClick,
-}) {
+}: ButtonProps) {
   let componentClass = "button";
   if (size && ["small", "large"].includes(size)) {
     componentClass += ` button-${size}`;
@@ -37,11 +49,7 @@ function Button({
   return (
     <button type={type} className={componentClass} onClick={onClick}>
       {icon ? (
-        <Icon
-          name={typeof icon === "string" ? icon : icon.name}
-          format={icon.format}
-          type={icon.type}
-        />
+        <Icon name={typeof icon === "string" ? icon : icon.name} />
       ) : null}
       {!(icon && square) ? <span>{children}</span> : null}
       {badge ? <Badge className={badge.className}>{badge.text}</Badge> : null}

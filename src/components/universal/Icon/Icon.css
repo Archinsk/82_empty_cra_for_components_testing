@@ -2,6 +2,6 @@
   font-family: "material-icons";
   text-transform: none;
   display: inline-block;
-  // Не верно, требуется уточнение
+  /* Не верно, требуется уточнение */
   vertical-align: calc(-0.125em + (1em - 1rem) / 20);
 }

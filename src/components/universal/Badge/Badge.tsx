@@ -1,6 +1,12 @@
-import "./Badge.scss";
+import React from "react";
+import "./Badge.css";
 
-function Badge({ children, className }) {
+interface BadgeProps {
+  children?: React.ReactNode;
+  className?: string;
+}
+
+function Badge({ children, className }: BadgeProps) {
   let componentClass = "badge";
   if (className) {
     componentClass += ` ${className}`;

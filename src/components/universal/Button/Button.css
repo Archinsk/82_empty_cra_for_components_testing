@@ -25,16 +25,12 @@
   );
   /* form */
   padding: calc(
-      var(--button-padding-y, var(--padding, 0.375em)) - var(
-          --button-border-width,
-          var(--border-width, 0.0625rem)
-        )
+      var(--button-padding-y, var(--padding, 0.375em)) -
+        var(--button-border-width, var(--border-width, 0.0625rem))
     )
     calc(
-      (var(--button-padding-y, var(--padding, 0.375em)) * 2) - var(
-          --button-border-width,
-          var(--border-width, 0.0625rem)
-        )
+      (var(--button-padding-y, var(--padding, 0.375em)) * 2) -
+        var(--button-border-width, var(--border-width, 0.0625rem))
     );
   border-radius: var(--button-border-radius, var(--border-radius));
   border-width: var(--button-border-width, var(--border-width, 0.0625rem));
@@ -51,16 +47,12 @@
 
 .button-square {
   padding-left: calc(
-    var(--button-padding-y, var(--padding, 0.375em)) - var(
-        --button-border-width,
-        var(--border-width, 0.0625rem)
-      )
+    var(--button-padding-y, var(--padding, 0.375em)) -
+      var(--button-border-width, var(--border-width, 0.0625rem))
   );
   padding-right: calc(
-    var(--button-padding-y, var(--padding, 0.375em)) - var(
-        --button-border-width,
-        var(--border-width, 0.0625rem)
-      )
+    var(--button-padding-y, var(--padding, 0.375em)) -
+      var(--button-border-width, var(--border-width, 0.0625rem))
   );
   width: calc(
     var(--button-font-size, var(--font-size, 1em)) *
