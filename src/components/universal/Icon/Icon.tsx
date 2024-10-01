@@ -3,7 +3,7 @@ import "./Icon.css";
 
 interface IconProps {
   className?: string;
-  name?: string;
+  name: string;
 }
 
 function Icon({ className, name }: IconProps) {

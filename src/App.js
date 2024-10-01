@@ -1,7 +1,7 @@
 import React from "react";
 import Icon from "./components/universal/Icon/Icon.tsx";
-import Badge from "./components/universal/Badge/Badge";
-import Button from "./components/universal/Button/Button";
+import Badge from "./components/universal/Badge/Badge.tsx";
+import Button from "./components/universal/Button/Button.tsx";
 
 function App() {
   const defaultBadge = {

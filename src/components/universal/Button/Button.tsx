@@ -1,7 +1,7 @@
 import React from "react";
 import "./Button.css";
-import Icon from "../Icon/Icon";
-import Badge from "../Badge/Badge";
+import Icon from "../Icon/Icon.tsx";
+// import Badge from "../Badge/Badge";
 
 interface ButtonProps {
   children?: React.ReactNode;
@@ -10,7 +10,7 @@ interface ButtonProps {
   size?: "small" | "large";
   block?: boolean;
   square?: boolean;
-  icon?: boolean;
+  icon?: string;
   badge?: boolean;
   onClick?: () => void;
 }
@@ -48,11 +48,9 @@ function Button({
 
   return (
     <button type={type} className={componentClass} onClick={onClick}>
-      {icon ? (
-        <Icon name={typeof icon === "string" ? icon : icon.name} />
-      ) : null}
+      {icon ? <Icon name={icon} /> : null}
       {!(icon && square) ? <span>{children}</span> : null}
-      {badge ? <Badge className={badge.className}>{badge.text}</Badge> : null}
+      {/* {badge ? <Badge className={badge.className}>{badge.text}</Badge> : null} */}
     </button>
   );
 }
